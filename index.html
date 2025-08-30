@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>@integrate.system - iPhone 12 vs Galaxy S21 #glassmorphism #cssonly</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="background"></div>
+<a target="_top" id="youtube" href="https://www.youtube.com/@integrate.system"><i class="fab fa-youtube"></i></a>
+<div id="container" :data-show='show_device'>
+  <div class="iphone-container" @click="toggleDevice('iphone')">
+    <div class='iphone'>
+      <div class="top-notch"></div>
+    </div>
+    <div class="title">Apple iPhone 12 Pro Max</div>
+    <div class="features">
+      <div class="summary">
+        <div v-for="(item, key) in iphone.summary" :class='key'>
+          <div class="summary-title">
+            {{item.title}}
+          </div>
+          <div class="summary-value">{{item.value}}</div>
+        </div>
+      </div>
+      <div class="summary-large">
+        <div v-for="(item, key) in iphone.summary_large" :class='key'>
+          <div class="summary-large-title">
+            {{item.title}}
+          </div>
+          <div class="summary-large-value">{{item.value}}</div>
+          <div class="summary-large-subvalue">{{item.subvalue}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="galaxy-container" @click="toggleDevice('galaxy')">
+    <div class="galaxy">
+      <div class="camera"></div>
+    </div>
+    <div class="title">Samsung Galaxy S21 Ultra</div>
+    <div class="features">
+      <div class="summary">
+        <div v-for="(item, key) in galaxy.summary" :class='key'>
+          <div class="summary-title">
+            {{item.title}}
+          </div>
+          <div class="summary-value">{{item.value}}</div>
+        </div>
+      </div>
+      <div class="summary-large">
+        <div v-for="(item, key) in galaxy.summary_large" :class='key'>
+          <div class="summary-large-title">
+            {{item.title}}
+          </div>
+          <div class="summary-large-value">{{item.value}}</div>
+          <div class="summary-large-subvalue">{{item.subvalue}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
